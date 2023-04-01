@@ -1,6 +1,6 @@
 package com.example.springmvc.controllers;
 
-import com.example.springmvc.models.Userr;
+import com.example.springmvc.models.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -17,22 +17,12 @@ public class RegistrationController {
     UserRepository userRepository;
 
     @RequestMapping("/register")
-    public String register(Model model) {
-        return "register";
-    }
+    public String register(@RequestParam String userId, @RequestParam String password){
 
-    @RequestMapping("/r")
-    public String r(Model model) {
-        return "register";
+// AISH DO REGISTRATION HERE
+        
+//      go to LOGIN page if successful
+        return "/login";
     }
-
-    @RequestMapping("/userpass")
-    public String userpass(@RequestParam String userId, @RequestParam String password) {
-        Userr userNP = new Userr();
-        userNP.setUserId(userId);
-        userNP.setPassword(password);
-        userRepository.save(userNP);
-        return "redirect:/login";
-      }
 
 }

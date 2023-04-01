@@ -16,29 +16,17 @@ public class RecipeController {
     @Autowired
     RecipeRepository recipeRepository;
 
-    @RequestMapping("/home")
-    public String home(Model model) {
-        return "home";
-    }
-
     @RequestMapping("/recipebook")
     public String recipe(Model model) {
         model.addAttribute("recipes", recipeRepository.findAll());
         return "recipebook";
     }
 
-    @RequestMapping("/about")
-    public String about(Model model) {
-        return "indexold";
-    }
-
-
     @RequestMapping("/create")
     public String create(Model model) {
         return "create";
     }
 
-    
     @RequestMapping("/save")
     public String save(@RequestParam String metric, @RequestParam int portionsize, @RequestParam String recipeName, @RequestParam String recipeDesc, @RequestParam String ing, @RequestParam String quant, @RequestParam String recipeCourse, @RequestParam String recipeImage) {
         Recipe recipe = new Recipe();
@@ -94,7 +82,5 @@ public class RecipeController {
 
         return "redirect:/showrecipe/" + recipe.getId();
     }
-
-    
     
 }
