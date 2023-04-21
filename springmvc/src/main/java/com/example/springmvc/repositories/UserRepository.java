@@ -4,11 +4,11 @@
  */
 package com.example.springmvc.repositories;
 
-import com.example.springmvc.models.User;
+import com.example.springmvc.models.Userr;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface UserRepository extends JpaRepository<User,Long>{
-    User findByUserId(final String UserId);
+public interface UserRepository extends JpaRepository<Userr,String>{
+    Userr findByUserId(final String UserId);
 }

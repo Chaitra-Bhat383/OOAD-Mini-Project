@@ -1,7 +1,7 @@
 package com.example.springmvc;
 
 import com.example.springmvc.models.Recipe;
-import com.example.springmvc.models.User;
+import com.example.springmvc.models.Userr;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
