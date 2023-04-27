@@ -4,10 +4,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import java.util.ArrayList;
-
-import java.util.List;
-import java.util.Arrays;
 import java.util.*;
 
 
@@ -148,27 +144,16 @@ public class Recipe {
     }
     
     public String getIng(){
-//        String ingredients ="";
-//        for(int i=0;i<this.inglist.length;i++){
-//            ingredients+=((this.inglist[i])+",");
-//            
-//        }
         return this.ingprint;
     }
 
     public String getQuant(){
-//        String ingredients ="";
-//        for(int i=0;i<this.quantlist.length;i++){
-//            ingredients+=(Integer.toString(this.quantlist[i])+",");
-//            
-//        }
         return this.quantprint;
     }
     
     public void setCal() {
         dictionary d = new dictionary();
         Dictionary geek = d.getDict();
-//        this.cal=Float.parseFloat((String)geek.get("flour"));
         float tot = 0;
         double factor=1.0;
         

@@ -13,6 +13,7 @@ import java.util.Arrays;
 //@EntityScan(basePackageClasses = {Recipe.class, User.class})
 @SpringBootApplication
 @EntityScan("com.example.springmvc.models")
+
 public class SpringmvcApplication {
 
 	public static void main(String[] args) {
